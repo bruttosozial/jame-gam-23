@@ -4,8 +4,10 @@ $switch2 = $true
 $check = $true
 $sw = [Diagnostics.Stopwatch]::StartNew()
 $r = 1
+Clear-Host
 while ($check) {
-    clear-host
+    #clear-host
+    [System.Console]::SetCursorPosition(0,0)
     if($sw.elapsed.totalseconds -gt 1) {
         $r = Get-Random -Minimum 1 -Maximum 4
         $sw = [Diagnostics.Stopwatch]::StartNew()

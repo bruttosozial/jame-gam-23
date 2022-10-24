@@ -6,12 +6,11 @@ $sw = [Diagnostics.Stopwatch]::StartNew()
 $r = 1
 while ($check) {
     clear-host
-    $sw.elapsed.totalseconds
     if($sw.elapsed.totalseconds -gt 1) {
         $r = Get-Random -Minimum 1 -Maximum 4
         $sw = [Diagnostics.Stopwatch]::StartNew()
     }
-    $r
+
     "There are three doors and you only have one key. Behind one of them is a murderer. Use your key wisely!"
     ""
     if ($switch1) {
